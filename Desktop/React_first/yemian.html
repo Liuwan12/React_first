@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=”UTF-8″>
+<title>yemian</title>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+  var json = [
+{ Id: "1", sex: "1200", age: "第一月" },
+{ Id: "2", sex: "2300", age: "第二月" },
+];
+  $(document).ready(function(){
+    for(var i=0;i<json.length;i++){
+      s="<tr><td>" + json[i].Id + "</td><td>"+ json[i].sex + "</td><td>" + json[i].age + "</td></tr>";
+      $("#tab").append(s)
+    }
+  });
+</script>
+</head>
+
+<body>
+<!-- <div> -->
+  <table id="tab">
+      <tr height="20px">
+         <td>Id</td>
+         <td>薪资</td>
+         <td>备注</td>
+      </tr>       
+  </tbody>
+  <div class="bot">
+    <div style="display:inline-block;">请输入工资金额</div>
+    <form action="tijiao" method="GET" style="display: inline-block;">
+      <input type="text" name="fname"/>
+      <input type="submit" />
+    </form>
+  </div>
+<!-- </div> -->
+</body>
+<style>
+  #tab{
+    margin: 0 auto;
+    position: relative;
+    top: -200px;
+    border: 1px solid #999;
+    width: 300px;
+  }
+  .bot{
+    border:1px solid #eee;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 300px;
+    /* height: 100px; */
+    padding: 20px;
+  }
+</style>
+</html>
